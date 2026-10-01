@@ -109,7 +109,7 @@ jupyter lab entrega_final.ipynb
 
 ## Instalación en Windows
 
-En Windows nativo puedes usar Python `3.11` y `requirements.txt`.
+En Windows nativo es necesario usar Python `3.11` y `requirements.txt`.
 
 Comprueba si tienes Python 3.11:
 
@@ -125,10 +125,16 @@ https://www.python.org/downloads/
 
 Durante la instalación, marca **Add python.exe to PATH**. Después cierra y vuelve a abrir PowerShell.
 
-Desde la carpeta del proyecto:
+Opción recomendada. Desde la carpeta del proyecto:
 
 ```powershell
-py -3.11 -m venv .venv
+uv sync
+```
+
+Alternativa con pip (requiere Python 3.11). Desde la carpeta del proyecto:
+
+```powershell
+python3.11 -m venv .venv
 .\.venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
