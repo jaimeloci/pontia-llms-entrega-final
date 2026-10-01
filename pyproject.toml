@@ -8,6 +8,7 @@ dependencies = [
   "ipykernel",
   "jsonschema",
   "jupyterlab",
+  "langchain-core>=1.6.6",
   "numpy",
   "openai",
   "pandas",
