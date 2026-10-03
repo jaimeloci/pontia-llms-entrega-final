@@ -35,6 +35,7 @@ certifi==2026.5.20
     # via
     #   httpcore
     #   httpx
+    #   langchain-openai
     #   requests
 cffi==2.0.0
     # via
@@ -43,9 +44,7 @@ cffi==2.0.0
 charset-normalizer==3.4.7
     # via requests
 colorama==0.4.6 ; sys_platform == 'win32'
-    # via
-    #   ipython
-    #   tqdm
+    # via ipython
 comm==0.2.3
     # via ipykernel
 debugpy==1.8.20
@@ -55,9 +54,7 @@ decorator==5.3.1
 defusedxml==0.7.1
     # via nbconvert
 distro==1.9.0
-    # via
-    #   langsmith
-    #   openai
+    # via langsmith
 executing==2.2.1
     # via stack-data
 fastjsonschema==2.21.2
@@ -76,9 +73,11 @@ httpx==0.28.1
     # via
     #   jupyterlab
     #   langchain-core
-    #   openai
+    #   langgraph-sdk
 httpx2==2.13.1
-    # via langsmith
+    # via
+    #   langsmith
+    #   openai
 idna==3.20
     # via
     #   anyio
@@ -104,7 +103,7 @@ jinja2==3.1.6
     #   jupyterlab
     #   jupyterlab-server
     #   nbconvert
-jiter==0.15.0
+jiter==0.17.0
     # via openai
 json5==0.14.0
     # via jupyterlab-server
@@ -154,14 +153,36 @@ jupyterlab-pygments==0.3.0
     # via nbconvert
 jupyterlab-server==2.28.0
     # via jupyterlab
+langchain==1.4.3
+    # via pontia-llms-entrega-final
 langchain-core==1.6.6
     # via
+    #   langchain
+    #   langchain-openai
     #   langchain-text-splitters
+    #   langgraph
+    #   langgraph-checkpoint
+    #   langgraph-prebuilt
+    #   langgraph-sdk
     #   pontia-llms-entrega-final
+langchain-openai==1.6.7
+    # via pontia-llms-entrega-final
 langchain-protocol==0.0.19
-    # via langchain-core
+    # via
+    #   langchain-core
+    #   langgraph-sdk
 langchain-text-splitters==1.1.3
     # via pontia-llms-entrega-final
+langgraph==1.2.12
+    # via langchain
+langgraph-checkpoint==4.2.0
+    # via
+    #   langgraph
+    #   langgraph-prebuilt
+langgraph-prebuilt==1.1.0
+    # via langgraph
+langgraph-sdk==0.4.5
+    # via langgraph
 langsmith==0.14.2
     # via langchain-core
 lark==1.3.1
@@ -193,10 +214,16 @@ numpy==2.4.6
     # via
     #   pandas
     #   pontia-llms-entrega-final
-openai==2.38.0
-    # via pontia-llms-entrega-final
-orjson==3.12.0 ; platform_python_implementation != 'PyPy'
-    # via langsmith
+openai==3.24.0
+    # via
+    #   langchain-openai
+    #   pontia-llms-entrega-final
+orjson==3.12.0
+    # via
+    #   langgraph-sdk
+    #   langsmith
+ormsgpack==1.12.2
+    # via langgraph-checkpoint
 overrides==7.7.0
     # via jupyter-server
 packaging==26.2
@@ -237,7 +264,9 @@ pycparser==3.0 ; implementation_name != 'PyPy'
     # via cffi
 pydantic==2.13.4
     # via
+    #   langchain
     #   langchain-core
+    #   langgraph
     #   langsmith
     #   openai
 pydantic-core==2.46.4
@@ -277,12 +306,15 @@ referencing==0.37.0
     #   jsonschema
     #   jsonschema-specifications
     #   jupyter-events
+regex==2026.9.29
+    # via tiktoken
 requests==2.34.2
     # via
     #   jupyterlab-server
     #   langsmith
     #   pontia-llms-entrega-final
     #   requests-toolbelt
+    #   tiktoken
 requests-toolbelt==1.0.0
     # via langsmith
 rfc3339-validator==0.1.4
@@ -321,6 +353,8 @@ terminado==0.18.1
     # via
     #   jupyter-server
     #   jupyter-server-terminals
+tiktoken==0.14.0
+    # via langchain-openai
 tinycss2==1.4.0
     # via bleach
 tornado==6.5.5
@@ -330,8 +364,6 @@ tornado==6.5.5
     #   jupyter-server
     #   jupyterlab
     #   terminado
-tqdm==4.67.3
-    # via openai
 traitlets==5.15.0
     # via
     #   ipykernel
@@ -387,9 +419,13 @@ webencodings==0.5.1
     #   tinycss2
 websocket-client==1.9.0
     # via jupyter-server
-websockets==17.1
-    # via langsmith
+websockets==16.1.1
+    # via
+    #   langgraph-sdk
+    #   langsmith
 xxhash==4.0.1
-    # via langsmith
+    # via
+    #   langgraph
+    #   langsmith
 zstandard==0.25.0
     # via langsmith
