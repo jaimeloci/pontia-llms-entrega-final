@@ -1,11 +1,11 @@
-# Configuración del entorno para `entrega_final.ipynb`
+# Configuración del entorno
 
 Este directorio contiene la configuración mínima para ejecutar la entrega final de la asignatura Large Language Models.
 
-El notebook principal es:
+El notebook principal se encuentra en:
 
 ```text
-entrega_final.ipynb
+.\notebooks\finales\notebook-llms-entrega-final.ipynb
 ```
 
 ## API Key
