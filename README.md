@@ -129,6 +129,7 @@ Opción recomendada. Desde la carpeta del proyecto:
 
 ```powershell
 uv sync
+.\.venv\Scripts\activate
 ```
 
 Alternativa con pip (requiere Python 3.11). Desde la carpeta del proyecto:
@@ -147,7 +148,6 @@ En Jupyter, selecciona el kernel:
 ```text
 Python 3.11 (pontia-llms-entrega-final)
 ```
-
 
 ## Sobre `pyproject.toml`, `uv.lock`, `Makefile` y `requirements.txt`
 
