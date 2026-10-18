@@ -1,7 +1,7 @@
 [project]
 name = "pontia-llms-entrega-final"
 version = "0.1.0"
-description = "Entorno reproducible para el notebook entrega_final.ipynb."
+description = "Entorno reproducible."
 readme = "README.md"
 requires-python = "==3.11.*"
 dependencies = [
