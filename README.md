@@ -163,16 +163,32 @@ El archivo `pyproject.toml` declara el proyecto, la versión de Python requerida
 
 ## Dependencias principales
 
-El notebook usa:
+El notebook principal usa:
 
-- `openai`
-- `numpy`
-- `pandas`
-- `requests`
-- `jsonschema`
-- `python-dotenv`
-- `jupyterlab`
-- `ipykernel`
+* Entorno interactivo Jupyter
+  * `ipykernel`
+  * `jupyterlab`
+
+* Ecosistema LangChain, LangGraph y OpenAI
+  * `langchain`
+  * `langchain-core`
+  * `langchain-openai`
+  * `langchain-text-splitters`
+  * `langgraph`
+  * `openai`
+  * `tiktoken`
+
+* Procesamiento de datos, PDF y visualización
+  * `matplotlib`
+  * `numpy`
+  * `pandas`
+  * `pypdf`
+
+* Red, validación de esquemas y configuración
+  * `jsonschema`
+  * `pydantic`
+  * `python-dotenv`
+  * `requests`
 
 `uv.lock` fija las dependencias transitivas para la ruta macOS/Linux con `make setup`. `requirements.txt` contiene una exportación fijada de dependencias para instalación manual con `pip`, especialmente útil en Windows.
 
