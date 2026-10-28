@@ -103,7 +103,7 @@ source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python -m ipykernel install --user --name pontia-llms-entrega-final --display-name "Python 3.11 (pontia-llms-entrega-final)"
-jupyter lab entrega_final.ipynb
+jupyter lab ./notebooks/finales/notebook-llms-entrega-final.ipynb
 ```
 
 
@@ -140,7 +140,7 @@ python3.11 -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 python -m ipykernel install --user --name pontia-llms-entrega-final --display-name "Python 3.11 (pontia-llms-entrega-final)"
-jupyter lab entrega_final.ipynb
+jupyter lab .\notebooks\finales\notebook-llms-entrega-final.ipynb
 ```
 
 En Jupyter, selecciona el kernel:
